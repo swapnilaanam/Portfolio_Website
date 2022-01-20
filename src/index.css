@@ -1,13 +1,285 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap");
+
+/* Basic Styles */
+
+*,
+html {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  margin: 0;
+  font-family: "Darker Grotesque", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: white;
+}
+
+/* Basic Styles */
+
+/* Navbar */
+
+nav {
+  font-weight: 400;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  background: black;
+}
+
+.nav-link:hover {
+  background: rgb(13, 151, 206) !important;
+}
+
+/* Navbar */
+
+/* Home */
+
+#banner-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#banner-container > img:nth-child(1) {
+  top: -0.1%;
+}
+
+#banner-left {
+  width: 68%;
+  z-index: -2;
+}
+
+#banner-dot {
+  top: 25.5%;
+  left: 7.1%;
+}
+
+#banner-right {
+  width: 38%;
+  background: #e5effd;
+}
+
+#banner-right > img {
+  margin: auto;
+  margin-top: 21rem;
+}
+
+#name-placer {
+  width: 550px;
+  height: 50px;
+  background: white;
+  overflow: hidden;
+}
+
+#name-placer .name {
+  width: 100%;
+  height: 100%;
+}
+
+.name:nth-child(1) {
+  animation: name-anim 1s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
+}
+
+.name:nth-child(2) {
+  animation: name-anim 1s cubic-bezier(0.19, 1, 0.22, 1) 3s both;
+}
+
+.name:nth-child(3) {
+  animation: name-anim 1s cubic-bezier(0.19, 1, 0.22, 1) 5.5s both;
+}
+
+@keyframes name-anim {
+  to {
+    margin-top: -50px;
+  }
+}
+
+#banner-right {
+  z-index: -2;
+}
+
+#banner-right > img:nth-child(2) {
+  left: 58%;
+  top: -10%;
+  z-index: -1;
+  animation: code-move 1.5s linear 0s infinite alternate-reverse;
+}
+
+#banner-right > img:nth-child(3) {
+  left: -17%;
+  top: -8%;
+  z-index: -1;
+  animation: code-move 2s linear 0s infinite alternate-reverse;
+}
+
+#banner-right > img:nth-child(4) {
+  left: -23%;
+  top: 15%;
+  z-index: -1;
+  animation: react-rotate 2s linear 0s infinite alternate-reverse;
+}
+
+#banner-right > img:nth-child(5) {
+  left: -14%;
+  bottom: 9%;
+  z-index: -2;
+}
+
+#banner-right > img:nth-child(6) {
+  right: 8%;
+  top: 13%;
+  z-index: -1;
+}
+
+#banner-right > img:nth-child(7) {
+  left: -10%;
+  top: -5%;
+  z-index: -2;
+}
+
+@keyframes mern-move {
+  0% {
+    top: -10%;
+  }
+  25% {
+    top: -12%;
+  }
+  50% {
+    top: -11%;
+  }
+  75% {
+    top: -12%;
+  }
+  100% {
+    top: -14%;
+  }
+}
+
+@keyframes code-move {
+  0% {
+    top: -8%;
+  }
+  25% {
+    top: -9%;
+  }
+  50% {
+    top: -10%;
+  }
+  75% {
+    top: -11%;
+  }
+  100% {
+    top: -12%;
+  }
+}
+
+@keyframes react-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(22.5deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(67.5deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+#work-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("./../public/assets/homeback-1.jpg") no-repeat fixed center;
+}
+
+#works-container {
+  margin: 7rem 0;
+  overflow: hidden;
+}
+
+#works {
+  transform: translateX(23.5rem);
+}
+
+.work {
+  width: 21.5rem;
+}
+
+#slider-navigator > i:nth-child(1) {
+  top: 48%;
+  left: 10%;
+  font-size: 2rem;
+  color: cornsilk;
+}
+
+#slider-navigator > i:nth-child(2) {
+  top: 48%;
+  right: 10%;
+  font-size: 2rem;
+  color: cornsilk;
+}
+
+#all-project {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+}
+
+#all-project > i {
+  margin-left: 0.5rem;
+}
+
+#feature-container {
+  background: ghostwhite;
+}
+
+#features {
+  width: 100%;
+  padding: 8rem 0;
+}
+
+.feature {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+  margin-top: 1rem;
+}
+
+.feature > i {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.feature-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+ /* Home  */
+
+ /* Project */
+
